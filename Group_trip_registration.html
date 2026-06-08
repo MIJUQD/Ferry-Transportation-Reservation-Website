@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+
+<head>
+    <title>RESERVATION FORM ( GROUP )</title>
+    <style>
+        h2 {
+            font-weight: 900;
+            padding-left: 40px;
+            color: #9C2327;
+        }
+
+        body {
+            background-image: url('Images/Registration_Background.jpg');
+            background-size: 100% 100%;
+            background-attachment: fixed;
+            font-family: Arial, sans-serif;
+            position: relative;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            height: 100vh;
+        }
+
+        .container {
+            max-width: 1300px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #F2F1EF;
+            position: relative;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        label {
+            text-align: left;
+            width: calc(100% - 80px);
+            padding-top: 20px;
+            color: #232222;
+            font-weight: 600;
+            font-size: small;
+        }
+
+        input[type="text"],
+        input[type="datetime-local"],
+        input[type="number"],
+        select {
+            width: calc(100% - 80px);
+            padding: 10px;
+            margin: 8px 50px;
+            box-sizing: border-box;
+            padding-left: 20px;
+            border: none;
+            border-bottom: 1px solid #9C2327;
+            background-color: transparent;
+            color: #9C2327;
+            outline: none;
+            align-items: center;
+        }
+
+        .passenger-list {
+            padding-top: 15px;
+            align-items: left;
+            width: 94%;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .passenger {
+            width: calc(100% - 75%);
+            margin-bottom: 10px;
+        }
+
+
+        .button-container {
+            width: 94%;
+            display: flex;
+            justify-content: space-between;
+            padding-top: 20px;
+        }
+
+        .cancel-link {
+            margin-top: 10px;
+        }
+
+        .cancel-link a {
+            font-weight: 600;
+            color: #232222;
+            text-decoration: none;
+        }
+
+        input[type="submit"] {
+            background-color: #9C2327;
+            color: #F2F1EF;
+            padding: 8px 16px;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h2>EARLY RESERVATION FORM</h2>
+        <form action="Group_trip_registration.php" method="post">
+
+            <label for="organizer">NAME OF ORGANIZER / REPRESENTATIVE</label>
+            <input type="text" id="organizer" name="organizer" required>
+
+            <label for="contact">EMAIL ADDRESS / CONTACT NUMBER</label>
+            <input type="text" id="contact" name="contact" required>
+
+            <label for="vehicle">VEHICLE ( IF AVAILABLE )</label>
+            <select id="vehicle" name="vehicle">
+                <option value="NONE">NONE</option>
+                <option value="BICYCLE">BICYCLE</option>
+                <option value="MOTORCYCLE">MOTORCYCLE</option>
+                <option value="PRIVATE CAR">PRIVATE CAR</option>
+                <option value="6W">6W</option>
+                <option value="10W">10W</option>
+                <option value="20F">20F</option>
+                <option value="40F">40F</option>
+            </select>
+
+            <label for="passengerCount">NUMBER OF PASSENGER</label>
+            <input type="number" id="passengerCount" name="passengerCount" min="1" max="10" required>
+
+            <div class="passenger-list">
+                <div class="passenger">
+                    <label for="passenger1">PASSENGER 1:</label>
+                    <input type="text" id="passenger1" name="passenger[]" required>
+                    <select name="passengerType[]">
+                        <option value="REGULAR PASSENGER">REGULAR PASSENGER</option>
+                        <option value="STUDENT PASSENGER">STUDENT PASSENGER</option>
+                        <option value="S.CITIZEN PASSENGER">SENIOR CITIZEN PASSENGER</option>
+                        <option value="HALF-FARE PASSENGER">HALF-FARE PASSENGER</option>
+                    </select>
+                </div>
+            </div>
+
+            <label for="reason">REASON FOR VISITING</label>
+            <input type="text" id="reason" name="reason" required>
+
+            <label for="departure">DEPARTURE SCHEDULE</label>
+            <input type="datetime-local" id="departure" name="departure" required>
+
+            <label for="duration">STAY DURATION</label>
+            <input type="text" id="duration" name="duration" required>
+
+            <div class="button-container">
+                <div class="cancel-link"><a href="Website.html">GO BACK HOME</a></div>
+                <input type="submit" value="SUBMIT">
+            </div>
+        </form>
+    </div>
+
+    <script>
+        const passengerCountInput = document.getElementById('passengerCount');
+        const passengerListContainer = document.querySelector('.passenger-list');
+
+        passengerCountInput.addEventListener('input', () => {
+            const count = parseInt(passengerCountInput.value);
+            passengerListContainer.innerHTML = '';
+            for (let i = 1; i <= count; i++) {
+                const passengerDiv = document.createElement('div');
+                passengerDiv.classList.add('passenger');
+                passengerDiv.innerHTML = `
+                <label for="passenger${i}">PASSENGER ${i}:</label>
+                <input type="text" id="passenger${i}" name="passenger[]" required>
+                <select name="passengerType[]">
+                    <option value="REGULAR PASSENGER">REGULAR PASSENGER</option>
+                    <option value="STUDENT PASSENGER">STUDENT PASSENGER</option>
+                    <option value="S.CITIZEN PASSENGER">SENIOR CITIZEN PASSENGER</option>
+                    <option value="HALF-FARE PASSENGER">HALF-FARE PASSENGER</option>
+                </select>
+            `;
+                passengerListContainer.appendChild(passengerDiv);
+            }
+        });
+    </script>
+
+</body>
+
+</html>

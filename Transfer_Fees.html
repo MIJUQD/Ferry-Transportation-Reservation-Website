@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Transfer Fees</title>
+    <style>
+        h1 {
+            text-align: center;
+            color: #232222;
+            margin: 3%;
+            font-weight: 900;
+        }
+
+        h2 {
+            font-weight: 800;
+            position: relative;
+            text-align: left;
+            margin: 2% auto;
+            width: 80%;
+            padding-left: 20px;
+            color: #F2F1EF;
+        }
+
+        h2::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            width: 280px;
+            height: 150%;
+            background-color: #9C2327;
+            z-index: -1;
+        }
+
+        body {
+            background-image: url('Images/Tranfer_Background.jpg');
+            background-size: 100% 90%;
+            background-attachment: fixed;
+            font-family: Arial, sans-serif;
+            position: relative;
+        }
+
+        table {
+            width: 80%;
+            border-collapse: collapse;
+            margin: auto;
+        }
+
+        th,
+        td {
+            font-size: large;
+            padding: 15px;
+            text-align: left;
+            border-bottom: 2px solid #232222;
+        }
+
+        th {
+            font-weight: 800;
+        }
+
+        a {
+            color: #F2F1EF;
+            text-decoration: none;
+        }
+
+        td:nth-child(1),
+        th:nth-child(1) {
+            width: 25.5%;
+        }
+
+        td:nth-child(2),
+        th:nth-child(2) {
+            width: 25.5%;
+        }
+
+        .Register_container {
+            position: relative;
+            display: inline-block;
+            left: 9.2%;
+            margin-top: 35px;
+            margin-bottom: 50px;
+        }
+
+        .Register_Button {
+            padding: 10px 20px;
+            background-color: #9C2327;
+            color: #F2F1EF;
+            font-size: large;
+            cursor: pointer;
+            font-weight: 800;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>PASSENGER AND ROLLING CARGO RATES</h1>
+    <h2>PASSENGER FEES</h2>
+    <table>
+        <tr>
+            <th>TYPE OF VEHICLE/S</th>
+            <th>PRICE/RATES</th>
+        </tr>
+        <tr>
+            <td>Regular Passenger</td>
+            <td>PHP 470</td>
+        </tr>
+        <tr>
+            <td>Student Passenger</td>
+            <td>PHP 400</td>
+        </tr>
+        <tr>
+            <td>Senior Citizen Passenger</td>
+            <td>PHP 335</td>
+        </tr>
+        <tr>
+            <td>Half Fare Passenger</td>
+            <td>PHP 235</td>
+        </tr>
+    </table>
+
+    <h2>VEHICLE FEES</h2>
+    <table>
+        <tr>
+            <th>TYPE OF VEHICLE/S</th>
+            <th>PRICE/RATES</th>
+        </tr>
+        <tr>
+            <td>Bicycle</td>
+            <td>PHP 338</td>
+        </tr>
+        <tr>
+            <td>Motorcycle</td>
+            <td>PHP 1352</td>
+        </tr>
+        <tr>
+            <td>Private</td>
+            <td>PHP 3380</td>
+        </tr>
+        <tr>
+            <td>6W</td>
+            <td>PHP 6084</td>
+        </tr>
+        <tr>
+            <td>10W</td>
+            <td>PHP 8112</td>
+        </tr>
+        <tr>
+            <td>20F</td>
+            <td>PHP 14872</td>
+        </tr>
+        <tr>
+            <td>40F</td>
+            <td>PHP 25688</td>
+        </tr>
+    </table>
+
+    <div class="Register_container">
+        <a href="Register.html" class="Register_Button">RESERVE A SIT</a>
+    </div>
+
+</body>
+
+</html>

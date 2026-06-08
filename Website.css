@@ -1,0 +1,60 @@
+body, ul {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #232222;
+    padding: 10px 0;
+    position: relative;
+    font-size: large;
+    font-weight: 800;
+    height: 50px;
+}
+
+nav ul.menu {
+    list-style-type: none;
+    text-align: left;
+    padding-left: 20px;
+}
+
+nav ul.menu li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+nav ul.menu li:first-child {
+    margin-left: 0;
+}
+
+nav ul.menu li a {
+    display: inline-block;
+    font-family: 'Beaufort', sans-serif;
+    text-decoration: none;
+    color: #F2F1EF;
+    padding: 10px 20px;
+    position: relative;
+}
+
+nav ul.menu li a:before {
+    content: '';
+    position: absolute; 
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 4px;
+    background-color: #9C2327;
+    transition: width 0.3s ease;
+}
+
+nav ul.menu li a.active:before {
+    width: 100%;
+}
+nav ul.menu li a:hover:before {
+    width: 100%;
+}
+
+nav ul.menu li a:hover {
+    font-weight: 800;
+}
+

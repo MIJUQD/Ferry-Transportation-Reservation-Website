@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Register for Reservation</title>
+    <style>
+        .Registration_Container {
+            position: relative;
+            display: inline-block;
+            padding-left: 20px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        .Reg_h1 {
+            text-align: center;
+            color: #F2F1EF;
+            margin: 1.7%;
+            margin-bottom: 2%;
+            font-weight: 900;
+        }
+
+        .Reg_h2 {
+            color: #F2F1EF;
+            padding-left: 20px;
+            font-weight: 800;
+        }
+
+        .Registration_p {
+            margin: auto;
+            width: 80%;
+            text-align: center;
+            margin-bottom: 3%;
+            font-size: larger;
+            color: #F2F1EF;
+        }
+
+        body {
+            background-color: #F2F1EF;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+
+        .container_p {
+            color: #F2F1EF;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        .container-background {
+            background-image: url('Images/Registration_Background.jpg');
+            background-size: cover;
+            background-position: center;
+            padding: 20px;
+            height: 540px;
+        }
+
+        .content {
+            width: 45%;
+            padding: 20px;
+            border-radius: 3px;
+            background-color: #9C2327;
+            position: relative;
+        }
+
+        .Registration {
+            padding: 10px 20px;
+            text-decoration: none;
+            color: #F2F1EF;
+            font-size: large;
+            cursor: pointer;
+            font-weight: 800;
+            border: 2px solid #F2F1EF;
+        }
+
+        .icon {
+            position: absolute;
+            top: -2px;
+            right: -45px;
+            width: 30px;
+            height: 30px;
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+
+        .solo-icon {
+            background-image: url('Images/Solo_icon.png');
+        }
+
+        .group-icon {
+            background-image: url('Images/Group_icon.png');
+        }
+
+
+        .Cancellation_h1 {
+            padding-top: 50px;
+            padding-left: 50px;
+            color: #232222;
+            font-weight: 700;
+        }
+
+        .Cancellation_h2 {
+            font-weight: 800;
+            position: relative;
+            text-align: left;
+            width: 93%;
+            padding-left: 60px;
+            color: #F2F1EF;
+            z-index: 1;
+        }
+
+        .Cancellation_h2::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 40px;
+            transform: translateY(-50%);
+            width: 380px;
+            height: 40px;
+            background-color: #9C2327;
+            z-index: -1;
+        }
+
+        .Cancellation_p {
+            width: 1250px;
+            margin-bottom: 30px;
+            padding-left: 50px;
+            font-size: larger;
+            color: #232222;
+            font-weight: 600;
+        }
+
+        .Cancel {
+            text-decoration: none;
+            color: #9C2327;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container-background">
+        <h1 class="Reg_h1">REGISTRATION FOR A TRIP TO MARINDUQUE</h1>
+
+        <p class="Registration_p">Secure your spot now for an unforgettable journey to Marinduque! Early
+            registration guarantees your seat on the Montenegro or Starhorse ship company's RORO trip. Don't miss out on
+            this
+            chance to explore the beautiful island hassle-free. Register today and get ready for an adventure of a
+            lifetime!
+        </p>
+
+        <div class="container">
+            <div class="content">
+                <h2 class="Reg_h2">SOLO REGISTRATION</h2>
+                <p class="container_p">Embark on a hassle-free adventure with our solo trip/passenger option for
+                    shipping your vehicle or taking
+                    a ride on our roll-on/roll-off (Ro-Ro)service to Marinduque! Whether you're traveling alone or with a
+                    vehicle, we've got you covered. Enjoy the convenience of sailing solo, without worrying about the
+                    logistics of transportation. Our reliable service ensures a smooth journey to this beautiful island
+                    destination, allowing you to focus on making memories and exploring Marinduque's stunning landscapes
+                    and vibrant culture.</p>
+                <div class="Registration_Container">
+                    <a href="Solo_trip_registration.html" class="Registration" target="_blank">SOLO TRIP</a>
+                    <div class="icon solo-icon"></div>
+                </div>
+            </div>
+            <div class="content">
+                <h2 class="Reg_h2">GROUP REGISTRATION</h2>
+                <p class="container_p">Enjoy the ultimate group adventure by shipping your vehicle or traveling together
+                    on our roll-on/roll-off
+                    (Ro-Ro) service to Marinduque! Gather your friends, family, or colleagues for a memorable trip to
+                    this beautiful island destination. With our spacious vessels and accommodating service, your group can
+                    enjoy a stress-free travel experience without the hassle of coordinating transportation logistics. Immerse
+                    yourself in the beauty and culture of Marinduque while having a memorable moments with your group along the way. </p>
+                <div class="Registration_Container">
+                    <a href="Group_trip_registration.html" class="Registration" target="_blank">GROUP TRIP</a>
+                    <div class="icon group-icon"></div>
+                </div>
+            </div>
+        </div>
+        <div class="Cancellation_Background">
+            <h1 class="Cancellation_h1">IF YOU EVER WISH TO CANCEL YOUR REGISTRATION</h1>
+            <h2 class="Cancellation_h2">WE'VE GOT YOUR COVER</h2>
+            <p class="Cancellation_p">If you've changed your mind about boarding our ship and wish to revoke your
+                reservation, we completely understand. No need to worry. Your comfort and convenience are our priorities.
+                Simply <a class="Cancel" href="link_here"  target="_blank">click here</a> and your request will be swiftly processed. We hope
+                to welcome you aboard in the future. Thank you for considering us on your journey.</p>
+        </div>
+    </div>
+</body>
+
+</html>
